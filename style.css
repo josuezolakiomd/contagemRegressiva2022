@@ -54,7 +54,7 @@ body {
 }
 .time h1 {
  font-size:5rem;
- color:red;
+ color:green;
 }
 .time small {
   letter-spacing:2px;
@@ -129,12 +129,15 @@ footer a {
   }
 }
 @media (max-width:550px){
+  .content .container {
+    background-color:rgba(0, 0, 0, 0.5);
+  }
   .countdown{
     flex-direction:column;
   }
   .time {
-    width:100px;
-    height:70px;
+    width:120px;
+    height:75px;
   }
   .time:not(:last-child){
     margin-right:0;
