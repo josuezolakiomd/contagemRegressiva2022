@@ -7,7 +7,7 @@ html {
   background-image:url('images/bg-image.jpg');
   background-repeat:no-repeat;
   background-size:cover;
-  background-position:top;
+  background-position:center;
   height:100vh;
 }
 body {
@@ -31,6 +31,7 @@ body {
   height:100%;
 }
 .content .container {
+  display:none;
   width:800px;
   height:400px;
   border-radius:6px;
@@ -114,6 +115,9 @@ footer a {
 }
 
 @media (max-width:700px) {
+  html {
+    background-position-y:0 !important;
+  }
   .countdown{
     flex-direction:row;
   }
@@ -129,6 +133,9 @@ footer a {
   }
 }
 @media (max-width:550px){
+  html {
+    background-position:top;
+  }
   .content .container {
     background-color:rgba(0, 0, 0, 0.5);
   }

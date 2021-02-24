@@ -3,6 +3,8 @@ const secondsContainer = document.querySelector('#seconds');
 const minutesContainer = document.querySelector('#minutes');
 const hoursContainer = document.querySelector('#hours');
 const daysContainer = document.querySelector('#days');
+const spinnerLoading = document.querySelector('#loading');
+const containerContent = document.querySelector('.container');
 
 const nextYear = new Date().getFullYear() + 1;
 const newYearTime = new Date(`January 01 ${nextYear} 00:00:00`);
@@ -24,5 +26,8 @@ const updateCountdown = () => {
   daysContainer.textContent = days < 10 ? '0' + days : days;
 }
 
-
+setTimeout( () => {
+  spinnerLoading.remove();
+  containerContent.style.display = 'flex';
+}, 1000)
 setInterval(updateCountdown, 1000);
